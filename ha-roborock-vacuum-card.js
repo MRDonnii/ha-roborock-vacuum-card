@@ -1,4 +1,4 @@
-const VERSION = "0.3.2";
+const VERSION = "0.3.3";
 
 class HARoborockVacuumCard extends HTMLElement {
   constructor() {
@@ -272,8 +272,8 @@ class HARoborockVacuumCard extends HTMLElement {
       .track i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
       .consumable.warn .track i{background:var(--danger)}
       .fan-row{display:flex;gap:6px;flex-wrap:wrap}
-      .fan-row button{flex:1;min-width:60px;padding:8px 4px;border:1px solid var(--edge);border-radius:10px;background:transparent;color:var(--secondary-text-color);font-size:10px;font-weight:700;text-transform:capitalize;cursor:pointer}
-      .fan-row button.active{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--primary-text-color)}
+      .fan-row button{flex:1;min-width:60px;padding:8px 4px;border:1px solid var(--edge);border-radius:10px;background:linear-gradient(155deg,rgba(255,255,255,.09),rgba(255,255,255,.018) 58%,rgba(0,0,0,.16));color:var(--secondary-text-color);font-size:10px;font-weight:700;text-transform:capitalize;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 5px 12px rgba(0,0,0,.16);transition:.2s ease}
+      .fan-row button.active{border-color:var(--accent);background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 32%,transparent),color-mix(in srgb,var(--accent) 10%,transparent));color:var(--primary-text-color);box-shadow:inset 0 1px 0 color-mix(in srgb,var(--accent) 35%,white),0 7px 18px color-mix(in srgb,var(--accent) 22%,transparent);transform:translateY(-1px)}
       .selects{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
       .selects label{display:block;color:var(--secondary-text-color);font-size:9px;font-weight:700;margin-bottom:4px;text-transform:uppercase}
       .selects select{width:100%;padding:7px;border:1px solid var(--edge);border-radius:8px;background:transparent;color:var(--primary-text-color)}
@@ -281,7 +281,7 @@ class HARoborockVacuumCard extends HTMLElement {
       .dnd-row label{color:var(--secondary-text-color);font-size:9px;font-weight:700;text-transform:uppercase}
       .dnd-row input{padding:6px;border:1px solid var(--edge);border-radius:8px;background:transparent;color:var(--primary-text-color)}
       .quick-row{display:flex;flex-wrap:wrap;gap:6px}
-      .quick-row button{flex:1;min-width:100px;padding:9px 6px;border:1px solid var(--edge);border-radius:10px;background:transparent;color:var(--primary-text-color);font-size:10px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+      .quick-row button{flex:1;min-width:100px;padding:9px 6px;border:1px solid var(--edge);border-radius:10px;background:linear-gradient(155deg,rgba(255,255,255,.09),rgba(255,255,255,.018) 58%,rgba(0,0,0,.16));color:var(--primary-text-color);font-size:10px;font-weight:700;cursor:pointer;display:flex;box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 6px 14px rgba(0,0,0,.18);transition:.2s ease;align-items:center;justify-content:center;gap:6px}
       .quick-row button:hover{border-color:var(--accent)}
       .quick-row ha-icon{--mdc-icon-size:15px;color:var(--accent)}
       .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px}.rooms+.clean-selected{position:sticky;bottom:92px;z-index:4;box-shadow:0 10px 28px rgba(0,0,0,.35)}
@@ -290,10 +290,10 @@ class HARoborockVacuumCard extends HTMLElement {
       .room span{position:relative;z-index:1}
       .room.selected{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 55%,transparent)}
       .room.no-pic{background:radial-gradient(circle at 82% 18%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 36%),color-mix(in srgb,var(--accent) 8%,transparent);color:var(--primary-text-color);text-shadow:none}
-      .clean-selected{width:100%;margin-top:10px;padding:10px;border:0;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;font-size:12px;cursor:pointer}
-      .clean-selected:disabled{opacity:.4;cursor:default}
+      .clean-selected{width:100%;margin-top:10px;padding:10px;border:0;border-radius:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 72%,white),var(--accent) 48%,color-mix(in srgb,var(--accent) 72%,black));color:#fff;font-weight:800;font-size:12px;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 24px color-mix(in srgb,var(--accent) 32%,transparent);text-shadow:0 1px 2px rgba(0,0,0,.25);transition:.2s ease}
+      .clean-selected:not(:disabled):hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 14px 28px color-mix(in srgb,var(--accent) 38%,transparent)}.clean-selected:not(:disabled):active{transform:translateY(1px)}.clean-selected:disabled{opacity:.38;cursor:default;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
       .controls{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:14px}
-      .controls button{display:flex;flex-direction:column;align-items:center;gap:4px;padding:9px 2px;border:1px solid var(--edge);border-radius:10px;background:transparent;color:var(--secondary-text-color);font-size:9px;font-weight:700;cursor:pointer}
+      .controls button{display:flex;flex-direction:column;align-items:center;gap:4px;padding:9px 2px;border:1px solid var(--edge);border-radius:10px;background:linear-gradient(155deg,rgba(255,255,255,.085),rgba(255,255,255,.015) 60%,rgba(0,0,0,.18));color:var(--secondary-text-color);font-size:9px;font-weight:700;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 5px 12px rgba(0,0,0,.17);transition:.2s ease}.controls button:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 9px 18px rgba(0,0,0,.25)}.controls button:active{transform:translateY(1px)
       .controls button:hover{border-color:var(--accent);color:var(--primary-text-color)}
       .controls button.primary{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--primary-text-color)}
       .controls ha-icon{--mdc-icon-size:18px}

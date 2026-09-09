@@ -19,7 +19,7 @@ rooms:
   - living_room
 ```
 
-Version 0.3.2 placerer rumvalget direkte under kortets aktuelle rengøringsdata og bruger et kompakt, responsivt kortområde.
+Version 0.3.3 giver knapperne fysisk dybde og tydelig trykfeedback samt placerer rumvalget direkte under kortets aktuelle rengøringsdata og bruger et kompakt, responsivt kortområde.
 
 ## Licens
 
