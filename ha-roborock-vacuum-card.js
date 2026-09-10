@@ -1,4 +1,4 @@
-const VERSION = "0.3.4";
+const VERSION = "0.3.5";
 
 class HARoborockVacuumCard extends HTMLElement {
   constructor() {
