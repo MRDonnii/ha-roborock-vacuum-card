@@ -236,7 +236,7 @@ class HARoborockVacuumCard extends HTMLElement {
     this.shadowRoot.innerHTML = `<style>
       :host{display:block;--accent:var(--dashboard-accent, var(--primary-color, #62b5ff));--good:var(--dashboard-success, var(--success-color, #54d9aa));--warn:var(--dashboard-warning, var(--warning-color, #ffbd59));--danger:var(--dashboard-danger, var(--error-color, #ff667a));--edge:var(--dashboard-border-neutral, var(--divider-color, rgba(127,145,165,.2)))}
       *{box-sizing:border-box}
-      ha-card{position:relative;overflow:hidden;padding:16px;border:1px solid var(--edge);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 5%,transparent),transparent 38%),var(--ha-card-background,var(--card-background-color));color:var(--primary-text-color);box-shadow:none}
+      ha-card{position:relative;overflow:hidden;padding:16px;border:var(--ha-card-border-width,1px) solid var(--ha-card-border-color,var(--edge));border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 5%,transparent),transparent 38%),var(--ha-card-background,var(--card-background-color));color:var(--primary-text-color);box-shadow:none}
       ha-card.has-error{border-left-color:var(--danger);animation:pulse-danger 1.8s ease-in-out infinite}
       @keyframes pulse-danger{0%,100%{box-shadow:var(--ha-card-box-shadow)}50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--danger) 22%,transparent),var(--ha-card-box-shadow)}}
       @media(prefers-reduced-motion:reduce){ha-card.has-error{animation:none}}
